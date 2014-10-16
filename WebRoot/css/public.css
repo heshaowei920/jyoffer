@@ -1,0 +1,38 @@
+
+body{background:#ffffff;padding: 0px;font:14px/22px "微软雅黑","宋体",Arial}
+
+
+#menu{width: 100%;height:60px; line-height:60px;background-color: #0099CC;text-align: center;overflow: hidden;}
+#menu ul{width:100% ;text-align: center;}
+#menu ul li{list-style: none;float: left;margin-left: 24px;font-size: 25px;color: #ffffff;}
+#menu ul li a{color:#ffffff;}
+#menu ul li a:hover{text-decoration:none;color:#FF6666;transition:color 0.3s linear;}
+
+
+.login{color:#ffffff}
+.login a{color:#ffffff}
+.login a:hover{text-decoration:none;color:#FF6666;transition:color 0.3s linear;}
+
+
+
+#content-warp {width: 1200px;height: 1000px;margin-left: auto;margin-right: auto;margin-top: 25px;}
+#content-left{width: 300px;height: 100%; float: left;margin-left: 10px}
+#content-right{width: 850px;height: 100%;background-color: #FAFAFA;float: right;margin-right: 10px}
+#bottom{width: 100%;height: 120px;background-color: #0099CC;margin-top: 20px;}
+
+.topmenu{display: block;width: 300px;margin: 0;padding: 0;background-color:#FAFAFA;position: relative;}
+.topmenu li{height: 80px;line-height: 80px;font-size: 11pt;list-style-type: none;text-align: left;padding-left: 8px;z-index: 3;background-image: url(http://img.mukewang.com/5411027300014f0200220030.jpg);background-repeat: no-repeat;background-position: right;}
+.topmenu li a{text-decoration: none;color: #313131;}
+.topmenu li a:hover{text-decoration: underline;font-weight: bold;color: #e4393c;}
+.topmenu li:hover{border: 1px solid #DDD;background-color:#ffffff;border-right: 0;box-shadow: 0 0 8px #DDD;-moz-box-shadow: 0 0 8px #DDD;-webkit-box-shadow: 0 0 8px #DDD;background-image: none;}
+.submenu{ width: 716px;height:500px;left:299px;position: absolute;top: 0px;border: 1px solid #DDD;z-index: 4;background: white;box-shadow: 0 0 8px #DDD;-moz-box-shadow: 0 0 8px #DDD;-webkit-box-shadow: 0 0 8px #DDD;display: none;}
+.leftdiv{float: left;width: 490px;margin: 5px;}
+.topmenu li:hover .submenu{display: block;}
+.topmenu li:hover span{background: white;z-index: 20;width: 20px;height: 78px;float: right;position: relative;}
+.leftdiv dl{display: block;border-bottom: 1px solid #EEE;padding-bottom: 6px;overflow: hidden;}
+.leftdiv dl dt{display: block;float: left;width: 60px;text-align: right;height: 22px;line-height: 22px;padding-right: 6px;}
+.leftdiv dl dt a{color: #e4393c;font-weight: bold;text-decoration: underline;font-size: 10pt;}
+.leftdiv dl dd{display: block;overflow: hidden;}
+.leftdiv dl dd a{color: #737373;font-size: 9pt; padding: 0 8px;height: 14px;line-height: 14px;margin: 4px 0;}
+
+
