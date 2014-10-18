@@ -21,9 +21,11 @@
 /*鼠标进入的反馈效果*/
 #gotoTop.hover{background-image:url(../images/gotop2.png);color:#fff;text-decoration:none;}
 
-.register{width: 500px;height:800px;background-color:#99ccff;text-align: center;padding: 10px;font-size: 18px;}
+.register{width: 500px;height:500px;background-color:#99ccff;text-align: center;padding: 10px;font-size: 18px;}
+table tr{height:30px;}
 table tr th{text-align: right;}
 .input{width: 300px;height: 40px;line-height:40px;margin-top: 10px;color:#999999;font-size: 18px;}
+.ss{height: 20px;}
 .check{width:300px;margin-top: 10px;height: 40px;line-height: 40px;font-size: 15px;}
 .clickme{margin-left:100px;margin-top:10px;width:120px;height: 40px;line-height:40px;background-color:#0099cc;cursor: pointer;text-align: center;color: #fff;font-size: 20px}
 .clickme:hover{background-color:#0077dd;text-decoration:none;transition:background-color 0.3s linear;}
@@ -46,16 +48,21 @@ table tr th{text-align: right;}
 	
 	
 	 <div class="register">
-	 <form action="${ctx}/users/save" method="post" name="form1">
+	 <form action="${ctx}/worker/save" method="post" name="form1">
 		
 		<table>
 		<tr><th>姓名：</th><td><input class="input" type="text" id="name" name="name"></td></tr>
 		
-		<tr><th>性别：</th><td><input type="radio" name="sex">男<input type="radio" name="sex">女</td></tr>
+		<tr><th>性别：</th><td>
+		<select name="sex" class="input">
+		<option value="1">男</option>
+		<option value="2">女</option>
+		</select>
+		</td></tr>
 		
 		<tr><th>年龄：</th><td><input class="input" type="text" id="age" name="age"></td></tr>
 		
-		<tr><th>学历：</th><td><select class="input">
+		<tr><th>学历：</th><td><select class="input" name="education">
 		     <option value="1">初中</option>
 		     <option value="1">高中</option>
 		     <option value="1">大专</option>
@@ -65,6 +72,26 @@ table tr th{text-align: right;}
 		   </select>  </td>  
 	    </tr>
 	     <tr><th> 手机号码：</th><td><input class="input" type="text" name="phone"  ></td></tr>
+	     
+	     <tr><th>期望薪资</th>
+	      <td>
+	      <select name="salary" class="input">
+	       <option value="1">1000~3000</option>
+	       <option value="2">3000~6000</option>
+	       <option value="3">6000~10000</option>
+	       <option value="4">10000~15000</option>
+	       <option value="5">15000~20000</option>
+	       <option value="6">20000以上</option>
+	      </select>
+	      </td>
+	     </tr>
+	     
+	     <tr><th> 目前状态：</th><td>
+	     <select name="condition" class="input">
+	     <option>目前离职</option>
+	     <option>正在考虑新的环境</option>
+	     </select>
+	     </td></tr>
 		</table>
 		<div class="clickme" onclick="register()">保存</div>
 		</form>
