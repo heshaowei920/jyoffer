@@ -5,7 +5,7 @@ import com.jfinal.core.Controller;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
-import com.jyoffer.model.Users;
+import com.jyoffer.dao.Users;
 
 public class UsersController extends Controller{
     
@@ -35,8 +35,15 @@ public class UsersController extends Controller{
 		System.out.println(password);
         Record c = new Record().set("userID", userID).set("password", password);
         Db.save("users", c);
-		renderJsp("../jsp/index.jsp");
+		renderJsp("../jsp/worker_edit.jsp");
 	}
+	
+	public void aa(){
+		
+		renderJsp("../jsp/worker_edit.jsp");
+	}
+	
+	
 	
 	
 	public void login(){
@@ -51,8 +58,11 @@ public class UsersController extends Controller{
 		
 		Users user = Users.dao.findFirst("select * from users where userID = ? and password = ?",userID,password);
 		
+		
 		System.out.println(user.getStr("userID"));
-		renderJsp("../jsp/index.jsp");
+		
+		setAttr("user", user);
+		renderJsp("../jsp/users_edit.jsp");
 	}
 	
 }

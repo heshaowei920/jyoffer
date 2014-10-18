@@ -12,9 +12,9 @@ import com.jyoffer.controller.CompanyController;
 import com.jyoffer.controller.IndexController;
 import com.jyoffer.controller.UsersController;
 import com.jyoffer.controller.WorkerController;
-import com.jyoffer.model.Company;
-import com.jyoffer.model.Users;
-import com.jyoffer.model.Worker;
+import com.jyoffer.dao.Company;
+import com.jyoffer.dao.Users;
+import com.jyoffer.dao.Worker;
 
 
 

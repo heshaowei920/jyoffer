@@ -1,4 +1,4 @@
-package com.jyoffer.model;
+package com.jyoffer.dao;
 
 import com.jfinal.plugin.activerecord.Model;
 

@@ -5,7 +5,7 @@ import com.jfinal.core.Controller;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
-import com.jyoffer.model.Users;
+import com.jyoffer.dao.Users;
 
 public class WorkerController extends Controller{
     

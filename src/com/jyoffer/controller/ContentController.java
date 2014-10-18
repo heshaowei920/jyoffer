@@ -5,7 +5,7 @@ package com.jyoffer.controller;
 import com.jfinal.aop.Before;
 import com.jfinal.core.Controller;
 import com.jfinal.plugin.activerecord.tx.Tx;
-import com.jyoffer.model.Users;
+import com.jyoffer.dao.Users;
 
 public class ContentController extends Controller{
     
