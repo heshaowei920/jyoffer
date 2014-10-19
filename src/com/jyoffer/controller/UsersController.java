@@ -8,7 +8,7 @@ import com.jfinal.plugin.activerecord.tx.Tx;
 import com.jyoffer.dao.Users;
 import com.jyoffer.dao.Worker;
 import com.jyoffer.model.WorkerVO;
-import com.jyoffer.test.SecurityHelper;
+import com.jyoffer.utils.SecurityHelper;
 
 public class UsersController extends Controller{
     

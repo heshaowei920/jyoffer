@@ -1,4 +1,4 @@
-package com.jyoffer.test;
+package com.jyoffer.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

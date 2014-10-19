@@ -1,4 +1,4 @@
-package com.jyoffer.test;
+package com.jyoffer.utils;
 
 import java.security.*;
 
@@ -7,7 +7,11 @@ import javax.crypto.spec.*;
 
 //import org.apache.commons.logging.Log;
 //import org.apache.commons.logging.LogFactory;
-
+/**
+ * url≤Œ ˝º”√‹
+ * @author xhsoft
+ *
+ */
 public class SecurityHelper {
 	// protected final static Log logger =
 	// LogFactory.getLog(SecurityHelper.class);

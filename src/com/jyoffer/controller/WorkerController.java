@@ -6,7 +6,7 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
 import com.jyoffer.dao.Users;
-import com.jyoffer.test.SecurityHelper;
+import com.jyoffer.utils.SecurityHelper;
 import com.jyoffer.utils.StringUtils;
 
 public class WorkerController extends Controller{
