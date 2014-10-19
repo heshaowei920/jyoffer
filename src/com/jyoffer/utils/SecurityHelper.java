@@ -1,21 +1,18 @@
 package com.jyoffer.utils;
 
 import java.security.*;
-
 import javax.crypto.*;
 import javax.crypto.spec.*;
-
-//import org.apache.commons.logging.Log;
-//import org.apache.commons.logging.LogFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 /**
  * url≤Œ ˝º”√‹
  * @author xhsoft
  *
  */
 public class SecurityHelper {
-	// protected final static Log logger =
-	// LogFactory.getLog(SecurityHelper.class);
-	private final static int ITERATIONS = 22;
+	protected final static Log logger = LogFactory.getLog(SecurityHelper.class);
+	private final static int ITERATIONS = 20;
 
 	public static String encrypt(String key, String plainText) throws Exception {
 		@SuppressWarnings("unused")
