@@ -1,6 +1,7 @@
 package com.jyoffer.test;
 
 import java.security.*;
+
 import javax.crypto.*;
 import javax.crypto.spec.*;
 
@@ -13,6 +14,7 @@ public class SecurityHelper {
 	private final static int ITERATIONS = 22;
 
 	public static String encrypt(String key, String plainText) throws Exception {
+		@SuppressWarnings("unused")
 		String encryptTxt = "";
 		try {
 			byte[] salt = new byte[8];

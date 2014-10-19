@@ -59,6 +59,7 @@ public class FileUtils {
 			} else {
 				isr = new InputStreamReader(fs, encoding);
 			}
+			@SuppressWarnings("resource")
 			BufferedReader br = new BufferedReader(isr);
 			try {
 				String data = "";
@@ -108,7 +109,8 @@ public class FileUtils {
 			String txt;
 			txts = folderPath;
 			StringTokenizer st = new StringTokenizer(paths, "|");
-			for (int i = 0; st.hasMoreTokens(); i++) {
+			for (@SuppressWarnings("unused")
+			int i = 0; st.hasMoreTokens(); i++) {
 				txt = st.nextToken().trim();
 				if (txts.lastIndexOf("/") != -1) {
 					txts = createFolder(txts + txt);
@@ -252,11 +254,13 @@ public class FileUtils {
 	 */
 	public static void copyFile(String oldPathFile, String newPathFile) {
 		try {
+			@SuppressWarnings("unused")
 			int bytesum = 0;
 			int byteread = 0;
 			File oldfile = new File(oldPathFile);
 			if (oldfile.exists()) {
 				InputStream inStream = new FileInputStream(oldPathFile);
+				@SuppressWarnings("resource")
 				FileOutputStream fs = new FileOutputStream(newPathFile);
 				byte[] buffer = new byte[1444];
 				while ((byteread = inStream.read(buffer)) != -1) {

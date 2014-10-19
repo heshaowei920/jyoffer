@@ -38,7 +38,9 @@ public class Arithmetic {
 	 * @return
 	 */
 	public String getEncString(String strMing) {
+		@SuppressWarnings("unused")
 		byte[] byteMi = null;
+		@SuppressWarnings("unused")
 		byte[] byteMing = null;
 		String strMi = "";
 		try {
@@ -64,7 +66,9 @@ public class Arithmetic {
 	 * @return
 	 */
 	public String getDesString(String strMi) {
+		@SuppressWarnings("unused")
 		byte[] byteMing = null;
+		@SuppressWarnings("unused")
 		byte[] byteMi = null;
 		String strMing = "";
 		try {
