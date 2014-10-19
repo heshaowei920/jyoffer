@@ -6,6 +6,9 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
 import com.jyoffer.dao.Users;
+import com.jyoffer.dao.Worker;
+import com.jyoffer.model.WorkerVO;
+import com.jyoffer.test.SecurityHelper;
 
 public class UsersController extends Controller{
     
@@ -52,17 +55,22 @@ public class UsersController extends Controller{
 	}
 	
 	
-	public void checkLogin(){
+	public void checkLogin() throws Exception{
 		String userID=getPara("userID");
 		String password=getPara("password");
 		
 		Users user = Users.dao.findFirst("select * from users where userID = ? and password = ?",userID,password);
 		
-		
-		System.out.println(user.getStr("userID"));
-		
-		setAttr("user", user);
-		renderJsp("../jsp/users_edit.jsp");
+		if(user!=null){
+			Worker worker=Worker.dao.findFirst("select * from worker where userID=?", userID);
+			WorkerVO workerVo=new WorkerVO();
+			workerVo.setName(worker.getStr("name"));
+			workerVo.setUserID(SecurityHelper.encrypt("11",worker.getStr("userID")));
+			setSessionAttr("worker",workerVo);
+			renderJsp("../jsp/users_edit.jsp");
+		}else{
+			renderJsp("../jsp/users_login.jsp");
+		}	
 	}
 	
 }

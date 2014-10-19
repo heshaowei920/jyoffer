@@ -22,9 +22,19 @@
 			<li><a href="#">我的简历</a></li>
 			<li><a href="#">发布职位</a></li>
 		</ul>
+		<!--<EMBED src="${ctx}/music/2.mp3" width=0 height=0 type=audio/mpeg loop="-1" autostart="true" volume="0"></EMBED>-->
 		
+		<div class="login">
+		<c:choose>
+		<c:when test="${empty worker.name }">
+		<a href="#">注册</a>|<a href="${ctx}/users/login">登录</a>
+		</c:when>
+		<c:otherwise>
+		  <a href="${ctx}/worker/edit?userID=${worker.userID}">${worker.name}</a>
+		</c:otherwise>
 		
-		<div class="login"><a href="${ctx}/users/register">注册</a>|<a href="${ctx}/users/login">登录</a></div>
+		</c:choose>
+         </div>
 	</div>
 
 	<div id="content-warp">

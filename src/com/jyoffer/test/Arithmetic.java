@@ -42,6 +42,7 @@ public class Arithmetic {
 		byte[] byteMing = null;
 		String strMi = "";
 		try {
+			
 			return byte2hex(getEncCode(strMing.getBytes()));
 
 			// byteMing = strMing.getBytes("UTF8");
@@ -88,6 +89,8 @@ public class Arithmetic {
 	 */
 	private static byte[] getEncCode(byte[] byteS) {
 		byte[] byteFina = null;
+		
+		
 		Cipher cipher;
 		try {
 			cipher = Cipher.getInstance("DES");
@@ -160,7 +163,7 @@ public class Arithmetic {
 		Arithmetic des = new Arithmetic();// 实例化一个对像
 		des.getKey("jyoffer");// 生成密匙
 
-		String strEnc = des.getEncString("樊振华");// 加密字符串,返回String的密文
+		String strEnc = des.getEncString("adc@qq.comsssssssssssssssssssss");// 加密字符串,返回String的密文
 		System.out.println(strEnc);
 
 		String strDes = des.getDesString(strEnc);// 把String 类型的密文解密

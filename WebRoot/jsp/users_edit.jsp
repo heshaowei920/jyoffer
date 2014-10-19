@@ -40,11 +40,11 @@
 		</ul>
 		<div class="login">
 		<c:choose>
-		<c:when test="${empty user.userID }">
+		<c:when test="${empty worker.name }">
 		<a href="#">注册</a>|<a href="#">登录</a>
 		</c:when>
 		<c:otherwise>
-		  <a href="#">${user.userID}</a>
+		  <a href="${ctx}/worker/edit?userID=${worker.userID}">${worker.name}</a>
 		</c:otherwise>
 		
 		</c:choose>

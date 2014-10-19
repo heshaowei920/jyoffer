@@ -88,5 +88,15 @@ public class StringUtils {
 		 }
 		 return strInfo;
 	 }
+	 
+	 /**
+	  * 将所有的空字符创替换成+
+	  * @param str
+	  * @return
+	  */
+	 public static String replaceAll(String str){
+		 str=str.replaceAll(" ", "+");
+		 return str;
+	 }
 
 }

@@ -26,7 +26,7 @@
 .clickme{margin-left:100px;margin-top:10px;width:120px;height: 40px;line-height:40px;background-color:#0099cc;cursor: pointer;text-align: center;color: #fff;font-size: 20px}
 .clickme:hover{background-color:#0077dd;text-decoration:none;transition:background-color 0.3s linear;}
 </style>
-<body>
+<body onkeypress="if (event.keyCode == 13)register()">
 	<div id="menu">
 		<ul>
 			<li><a href="${ctx}/index">首页</a></li>
@@ -37,7 +37,17 @@
 		</ul>
 		
 		
-		<div class="login"><a href="#">注册</a>|<a href="#">登录</a></div>
+		<div class="login">
+		<c:choose>
+		<c:when test="${empty worker.name }">
+		<a href="#">注册</a>|<a href="#">登录</a>
+		</c:when>
+		<c:otherwise>
+		  <a href="#">${worker.name}</a>
+		</c:otherwise>
+		
+		</c:choose>
+         </div>
 	</div>
 
 	<div id="content-warp">
@@ -48,7 +58,7 @@
 		<input class="input" type="text" id="userID" name="userID"  value="请输入常用的邮箱" onfocus="if(value=='请输入常用的邮箱') {value='';}this.style.color='#000';" onblur="if (value=='') {value='请输入常用的邮箱';this.style.color='#999';}">      
 	    <input class="input" type="text" name="password"  value="请输入密码"  onfocus="if(value=='请输入密码') {value='';}$(this).attr('type','password');this.style.color='#000';" onblur="if (value=='') {value='请输入密码';this.style.color='#999';$(this).attr('type','text'); }">
 		
-		<div class="clickme" onclick="register()">登录</div>
+		<div class="clickme"  onclick="register()">登录</div>
 		</form>
 		</div>
 	</div>

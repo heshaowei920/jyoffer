@@ -64,14 +64,16 @@ public class SecurityHelper {
 	
 	
 	 public static void main(String[] args) {
+		 
+		 
 		  String encryptTxt = "";
-		  String plainTxt = "ss";
+		  String plainTxt = "adc@qq.comsssssssssssssssssssss";
 		  try {
 		   System.out.println(plainTxt);
-		   encryptTxt = encrypt("11", plainTxt);
+		   encryptTxt = encrypt("ss", plainTxt);
 		   
 		   
-		   plainTxt = decrypt("11", encryptTxt);
+		   plainTxt = decrypt("ss", encryptTxt);
 		   System.out.println(encryptTxt);
 		   System.out.println(plainTxt);
 		  } catch (Exception e) {

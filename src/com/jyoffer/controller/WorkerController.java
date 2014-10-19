@@ -6,6 +6,8 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
 import com.jyoffer.dao.Users;
+import com.jyoffer.test.SecurityHelper;
+import com.jyoffer.utils.StringUtils;
 
 public class WorkerController extends Controller{
     
@@ -46,6 +48,16 @@ public class WorkerController extends Controller{
         
         setSessionAttr("name",name);
 		renderJsp("../jsp/index.jsp");
+	}
+	
+	public void edit() throws Exception{
+		String userID=getPara("userID");
+		
+		userID=StringUtils.replaceAll(userID);
+		userID=SecurityHelper.decrypt("11", userID);
+		System.out.println(userID);
+		renderJsp("../jsp/index.jsp");
+		
 	}
 	
 	
