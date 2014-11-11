@@ -27,8 +27,6 @@ public class CompanyController extends Controller{
 	
 	@Before(Tx.class)
 	public void save(){
-        
-		
 		String userID=getPara("userID");
 		String password=getPara("password");
 		System.out.println(userID);

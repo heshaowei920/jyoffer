@@ -167,10 +167,40 @@
 			</ul>
 
 		</div>
-		<div id="content-right"></div>
+		<div id="content-right">
+		
+		<img id="validationCode" alt="验证码图片" title="验证码图片" src="${ctx}/validationCodeServlet.png" onclick="refreshCode(this)" /> 
+             <a id="aRecode" href="javascript:void(0);" onclick="refreshCode()">换一张</a>
+		</div>
 	</div>
+
 
 	<div id="bottom"></div>
 
 </body>
+<script type="text/javascript">
+function refreshCode(imgObj) { 
+	 
+    if (!imgObj) { 
+ 
+        imgObj = document.getElementById("validationCode"); 
+ 
+    } 
+ 
+    var index = imgObj.src.indexOf("?"); 
+ 
+    if(index != -1) { 
+ 
+        var url = imgObj.src.substring(0,index + 1); 
+ 
+        imgObj.src = url + Math.random(); 
+ 
+    } else { 
+ 
+        imgObj.src = imgObj.src + "?" + Math.random(); 
+ 
+    } 
+ 
+}
+</script>
 </html>
