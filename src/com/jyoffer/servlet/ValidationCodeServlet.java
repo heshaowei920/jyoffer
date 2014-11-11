@@ -129,7 +129,7 @@ public class ValidationCodeServlet extends HttpServlet {
         wordFactory = new RandomWordFactory(); 
         wordFactory.setCharacters("abcdefghkmnpqstwxyz23456789"); 
         wordFactory.setMaxLength(5); 
-        wordFactory.setMinLength(5); 
+        wordFactory.setMinLength(4); 
         configurableCaptchaService.setWordFactory(wordFactory); 
         // 自定义验证码图片背景 
  
