@@ -24,7 +24,7 @@ public class MainConfig extends JFinalConfig{
 
 	@Override
 	public void configConstant(Constants me) {
-		loadPropertyFile("classes\\jdbc.properties");	
+		loadPropertyFile("jdbc.properties");	
 		me.setDevMode(getPropertyToBoolean("devMode", false));
 		
 	}

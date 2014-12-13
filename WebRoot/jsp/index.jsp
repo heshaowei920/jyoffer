@@ -10,7 +10,7 @@
 <script type="text/javascript"
 	src="${ctx}/bootstrap/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>揭阳JYOFFER</title>
+<title>JOFFER</title>
 </head>
 </head>
 <body>
