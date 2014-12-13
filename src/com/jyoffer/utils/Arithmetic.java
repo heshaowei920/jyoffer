@@ -167,7 +167,7 @@ public class Arithmetic {
 		Arithmetic des = new Arithmetic();// 实例化一个对像
 		des.getKey("jyoffer");// 生成密匙
 
-		String strEnc = des.getEncString("adc@qq.comsssssssssssssssssssss");// 加密字符串,返回String的密文
+		String strEnc = des.getEncString("root");// 加密字符串,返回String的密文
 		System.out.println(strEnc);
 
 		String strDes = des.getDesString(strEnc);// 把String 类型的密文解密

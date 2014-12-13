@@ -17,6 +17,7 @@ import com.jyoffer.dao.Company;
 import com.jyoffer.dao.Users;
 import com.jyoffer.dao.Worker;
 import com.jyoffer.handler.ServletHandler;
+import com.jyoffer.utils.Arithmetic;
 
 
 
@@ -46,7 +47,10 @@ public class MainConfig extends JFinalConfig{
 		String url=getProperty("url");
 		String userName=getProperty("userName");
 		String password=getProperty("password");
-		
+		Arithmetic des = new Arithmetic();// 实例化一个对像
+		des.getKey("jyoffer");// 生成密匙
+		userName = des.getDesString(userName);
+		password = des.getDesString(password);
 		C3p0Plugin cp=new C3p0Plugin(url,userName,password);
 	    me.add(cp);
 	    ActiveRecordPlugin arp=new ActiveRecordPlugin(cp);
