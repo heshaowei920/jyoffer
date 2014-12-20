@@ -6,6 +6,7 @@ String domain=request.getScheme()+"://"+request.getServerName()+":"+request.getS
 String basePath=domain+path;
 
 pageContext.setAttribute("ctx",path);
+pageContext.setAttribute("title","JOFFER");
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script type="text/javascript" src="${ctx}/js/jquery-1.11.0.js"></script>

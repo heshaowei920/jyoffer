@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ include file="comm.jsp"%>
 <html>
 <head>
@@ -10,7 +9,7 @@
 <script type="text/javascript"
 	src="${ctx}/bootstrap/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>揭阳JYOFFER</title>
+<title>JOFFER</title>
 </head>
 </head>
 <style type="text/css">
@@ -97,7 +96,7 @@ table tr th{text-align: right;}
 		</form>
 		</div>
 	</div>
-    
+    ${worker.userID}
     <span id="page"></span>
     
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

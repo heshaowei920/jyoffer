@@ -6,26 +6,20 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.jfinal.plugin.activerecord.tx.Tx;
 import com.jyoffer.dao.Users;
+import com.jyoffer.dao.Worker;
 import com.jyoffer.utils.SecurityHelper;
 import com.jyoffer.utils.StringUtils;
 
 public class WorkerController extends Controller{
     
-	public void index(){
-		
-		setAttr("msg", "这是一个测试的例子");
-        Users users=Users.dao.findById(1);
-        
-       System.out.println(users.getStr("name"));
-       System.out.println(users.getStr("password"));
+	public void index() {
+		Users users = Users.dao.findById(1);
 		renderJsp("../jsp/index.jsp");
 	}
 	
 	
 	@Before(Tx.class)
 	public void save(){
-        
-		
 		String age=getPara("age");
 		String sex=getPara("sex");
 		String name=getPara("name");
@@ -52,15 +46,13 @@ public class WorkerController extends Controller{
 	
 	public void edit() throws Exception{
 		String userID=getPara("userID");
-		
 		userID=StringUtils.replaceAll(userID);
 		userID=SecurityHelper.decrypt("11", userID);
+        Worker worker=Worker.dao.findFirst("select * from worker where userID=?", userID);
+		setAttr("worker", worker);
 		System.out.println(userID);
-		renderJsp("../jsp/index.jsp");
+		renderJsp("../jsp/worker_edit.jsp");
 		
 	}
-	
-	
-
 	
 }
